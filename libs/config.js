@@ -1,12 +1,14 @@
 module.exports = {
-    database: 'ntask',
+    database: 'task',
     username: "",
     password: "",
     params: {
         dialect: 'sqlite',
-        storage: 'ntask.sqlite',
+        storage: 'task.sqlite',
         define: {
             underscored: true
         }
-    }
+    },
+    jwtSecret: 'ta$K-AP1',
+    jwtSession: { session: false}
 };

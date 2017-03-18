@@ -7,6 +7,8 @@ module.exports = app => {
 
     app.use(bodyParser.json());
 
+    app.use(app.auth.initialize());
+
     app.use((req, res, next) => {
         //middleware for preexecution routes
         delete req.body.id;
